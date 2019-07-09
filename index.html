@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <h1>Reversi</h1>
+    <div id="SetGame">
+        <h2>Plaese select board's size:</h2>
+        <select id="SelectSize" size="6">
+            <option value="8">6 X 6</option>
+            <option>8 X 8</option>
+            <option selected>10 X 10</option>
+            <option>12 X 12</option>
+            <option>14 X 14</option>
+            <option>16 X 16</option>
+        </select>
+        <button class="Button" id="togglee" onclick="start()">Start Play</button>
+    </div>
+
+
+    <div id="StartGame">
+        <h3 id="winner"></h3>
+        <h2 id="time"></h2>
+        <div class="gameSection">
+            <ul>
+                <li>
+                    <div>
+                        <h2>White Statistics</h2>
+                        <table class="StatisticsTable">
+                            <tr>
+                                <td>Average Turn Time</td>
+                                <td id="whiteAvgTime">00:00</td>
+                            </tr>
+                            <tr>
+                                <td>Times That Has Two Chips</td>
+                                <td id="whiteHas2Chips">1</td>
+                            </tr>
+                            <tr>
+                                <td>Score</td>
+                                <td id="whiteScore">2</td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </li>
+                <li>
+                    <table id="gameTable"></table>
+                </li>
+                <li>
+                    <div>
+                        <h2>Black Statistics</h2>
+                        <table class="StatisticsTable">
+                            <tr>
+                                <td>Average Turn Time</td>
+                                <td id="blackAvgTime">00:00</td>
+                            </tr>
+                            <tr>
+                                <td>Times That Has Two Chips</td>
+                                <td id="blackHas2Chips">1</td>
+                            </tr>
+                            <tr>
+                                <td>Score</td>
+                                <td id="blackScore">2</td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <h2>Turn Number:</h2>
+        <h2 id=TurnNumber>0</h2>
+
+        <button class="Button" onclick="quitGame()">Quit Game</button>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+
+</html>
